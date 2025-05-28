@@ -7,6 +7,8 @@ pipeline {
             steps {
                 withMaven(maven : 'maven_3_5_0') {
                     bat 'mvn clean compile'
+                    bat 'echo Simulating compilation step...'
+
                 }
             }
         }
@@ -16,6 +18,8 @@ pipeline {
             steps {
                 withMaven(maven : 'maven_3_5_0') {
                     bat 'mvn test'
+                    bat 'echo Simulating testing step...'
+
                 }
             }
         }
